@@ -1,70 +1,114 @@
 
-# Project Title: Juneau Vacation Home Website
+# Hotel Management API
 
-A modern, responsive vacation rental property website showcasing a stunning beachfront home in Juneau, Alaska. This single-page application features an elegant user interface with advanced booking capabilities and comprehensive property information.
-
+A RESTful API built with Node.js, Express.js, and TypeScript for managing hotel information.
 
 ## Features
 
-- Header: Includes a navigation menu with options for region selection, trip boards, property listing, help, and user account.
-- Banner: Displays the property's main image and various interactive elements like share, save, and image gallery.
-- Property Information: Provides detailed information about the property, including the number of bedrooms and bathrooms, property size, and popular amenities.
-- Booking System: List the features of booking system
-- Rooms and Beds: Presents the layout of the bedrooms and bathroom.
-- About the Property: Offers a detailed description of the property, its location, and the hosting company.
-- Amenities: Lists the available amenities at the property.
-- Question Search: Allows users to search for answers to their questions about the property.
-- House Rules and Policies: Outlines the property's rules, damage and incident policies, and cancellation policy.
-- Frequently Asked Questions: Provides answers to common questions about the property.
-- Footer: Includes information about the host, languages, and a button to contact the host.
-- Responsive: for both mobile and desktop
+- CRUD operations for hotel management
+- Image upload functionality
+- JSON file-based data storage
+- TypeScript implementation
+- Unit testing with Jest
+- ESLint configuration
+- Input validation
+- Error handling
+
 
 ## Technology Stack
 
-- HTML
-- Vanilla CSS
-- JavaScript
-
-## Tools
-
-The following tools help make easier to work with code.
-
-- [git](https://git-scm.com/downloads): A tool for managing source code
-- [Visual Studio Code](https://code.visualstudio.com/): A source code editor
-- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer): A simple web server utility for Visual Studio Code
+- Node JS
+- Express
+- TypeScript
 
 ## Project Structure
 
 ```plaintext
-.
-├── index.html
-├── images
-│   ├── img1.jpg
-│   ├── img2.jpg
-│   ├── img3.jpg
-│   ├── img4.jpg
-│   ├── img5.jpg
-│   ├── img7.png
-│   └── img8.png
-├── script.js
-├── styles.css
-└── README.md
+hotel-management-system/
+├── src/
+│   ├── controllers/
+│   │   └── hotelController.ts
+│   ├── models/
+│   │   └── Hotel.ts
+│   ├── routes/
+│   │   └── hotelRoutes.ts
+│   ├── tests/
+│   │   └── hotel.test.ts
+│   └── app.ts
+├── database/
+│   └── hotels/
+├── uploads/
+├── tsconfig.json
+├── .eslintrc.json
+├── .gitignore
+└── package.json
 
 ```
 
 ## Getting Started
 
-To run the website locally or contribute to the project, follow these steps:
+Follow these instructions to set up the project locally for development and testing purposes.
+
 
 ### Prerequisites
 
-- Web browser (Chrome, Firefox, Safari, etc.)
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+- TypeScript knowledge
+- Git
+- VS code editor
+
 
 ### Clone the Repository
 
 ```bash
 - git clone https://github.com/Khairun-Nahar-Munne/w3_assignment2.git
 - cd property-details-website 
+```
+
+### Project Setup
+
+#### Create project directory
+```bash
+mkdir hotel-management-api
+cd hotel-management-api
+```
+#### Initialize project
+```bash
+npm init -y
+```
+#### Install dependencies
+```bash
+npm install express cors dotenv multer slugify uuid
+```
+#### Install dev dependencies
+```bash
+npm install -D typescript @types/node @types/express @types/cors @types/multer \
+  ts-node-dev jest ts-jest @types/jest supertest @types/supertest \
+  eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
+  ```
+
+### Run Application
+
+#### Development mode:
+```bash
+npm run dev
+```
+
+#### Production mode:
+```bash
+npm run build
+npm start
+```
+
+#### Run tests:
+```bash
+npm test
+```
+
+#### Lint code:
+```bash
+npm run lint
 ```
 
 ### How to open the website
